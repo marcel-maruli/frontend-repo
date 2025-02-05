@@ -1,0 +1,52 @@
+{
+  "name": "backend-repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "dev": "nodemon",
+    "start": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky",
+    "lint": "eslint \"{config,controllers,middleware,repository,routes,utils}/**/*.ts\" --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "backend-repo"
+  },
+  "author": "marcel-maruli",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "eslint-config-prettier": "^10.0.1",
+    "express": "^4.21.2",
+    "firebase": "^11.2.0",
+    "firebase-admin": "^13.0.2",
+    "firebase-functions": "^6.3.1",
+    "firebase-tools": "^13.30.0",
+    "i": "^0.3.7",
+    "jsonwebtoken": "^9.0.2",
+    "lint": "^0.8.19",
+    "punycode": "^2.3.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.26.4",
+    "@babel/core": "^7.26.7",
+    "@babel/preset-typescript": "^7.26.0",
+    "@eslint/js": "^9.19.0",
+    "@types/cookie-parser": "^1.4.8",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.0",
+    "eslint": "^9.19.0",
+    "husky": "^9.1.7",
+    "nodemon": "^3.1.9",
+    "npm": "^11.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.23.0"
+  }
+}
