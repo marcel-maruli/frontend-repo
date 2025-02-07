@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.ts",
+  "engines": {
+    "node": "22"
+  },
   "scripts": {
+    "build": "tsc",
     "dev": "nodemon",
-    "start": "nodemon",
+    "start": "firebase emulators:start",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky",
     "lint": "eslint \"{config,controllers,middleware,repository,routes,utils}/**/*.ts\" --fix"
@@ -27,10 +31,9 @@
     "firebase-admin": "^13.0.2",
     "firebase-functions": "^6.3.1",
     "firebase-tools": "^13.30.0",
-    "i": "^0.3.7",
     "jsonwebtoken": "^9.0.2",
     "lint": "^0.8.19",
-    "punycode": "^2.3.1"
+    "@repo/shared-types": "*" 
   },
   "devDependencies": {
     "@babel/cli": "^7.26.4",

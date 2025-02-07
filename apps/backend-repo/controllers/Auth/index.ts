@@ -32,25 +32,28 @@ export const AuthController = {
         }
       });
       if (isValid) {
-        res.status(200).send({
+        res.status(200).json({
           status: 200,
           authorizedData: { user },
           token: token,
           message: "login success!",
+          isSuccess: true,
         });
       } else {
-        res.status(404).send({
+        res.status(404).json({
           status: 404,
           error: true,
           message: "email or password invalid!",
+          isSuccess: false,
         });
       }
     } catch (error) {
       console.log(error);
-      res.status(404).send({
+      res.status(404).json({
         status: 404,
         message: "No data found!",
         data: [],
+        isSuccess: false,
       });
     }
   },

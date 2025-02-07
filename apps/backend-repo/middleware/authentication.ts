@@ -1,5 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 import { decodedToken } from "../utils/decodedToken";
+import * as logger from "firebase-functions/logger";
 
 export const Authentication = async (
   req: Request,
@@ -8,13 +9,15 @@ export const Authentication = async (
 ) => {
   try {
     const token = decodedToken(req);
-    const userEmail = token.email;
+    const id = token.id;
+      
 
-    if (req.params.email && req.params.email !== userEmail) {
+    if (req.params.userId && req.params.userId != id) {
       res.status(403).send({
         status: 403,
         message: "Forbidden!",
       });
+      logger.info("Hello logs!", { structuredData: true });
     } else {
       next();
     }

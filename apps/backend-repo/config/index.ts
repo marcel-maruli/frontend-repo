@@ -1,7 +1,11 @@
 import { initializeApp, ServiceAccount, cert } from "firebase-admin/app";
-import { serviceAccount } from "./serviceAccount";
 
 import { getFirestore } from "firebase-admin/firestore";
+
+/**
+ * Uncomment this import below
+ */
+// import serviceAccount from "./serviceAccount.ts.example"
 
 // Firebase configuration
 const {
@@ -15,7 +19,11 @@ const {
 
 const firebaseConfig = {
   apiKey: FIREBASE_API_KEY,
-  credential: cert(serviceAccount as ServiceAccount),
+  /**
+   * Uncomment this credential below
+   */
+  
+  // credential: cert(serviceAccount as ServiceAccount),
   authDomain: FIREBASE_AUTH_DOMAIN,
   projectId: FIREBASE_PROJECT_ID,
   storageBucket: FIREBASE_STORAGE_BUCKET,

@@ -6,7 +6,8 @@ const router = Router();
 const { GetAllUser, AddUser, UpdateUser } = UsersController;
 
 router.post("/add-user-data", AddUser);
-router.get("/fetch-user-data", Authentication, GetAllUser);
-router.put("/update-user-data/:email", Authentication, UpdateUser);
+router.get("/fetch-user-data", GetAllUser);
+router.put("/update-user-data/:userId", Authentication, UpdateUser);
 
 export default router;
+
